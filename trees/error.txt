@@ -1,0 +1,36 @@
+SEVERE: Error running file: bears_aligned_bdss.xml
+Feb 16, 2021 2:38:56 PM dr.app.beast.BeastMain <init>
+SEVERE: The initial model is invalid because state has a zero probability.
+
+If the log likelihood of the tree is -Inf, this may be because the
+initial, random tree is so large that it has an extremely bad
+likelihood which is being rounded to zero.
+
+Alternatively, it may be that the product of starting mutation rate
+and tree height is extremely small or extremely large.
+
+Finally, it may be that the initial state is incompatible with
+one or more 'hard' constraints (on monophyly or bounds on parameter
+values. This will result in Priors with zero probability.
+
+The individual components of the posterior are as follows:
+The initial posterior is zero:
+  CompoundLikelihood(compoundModel)=(
+    LogNormal(kappa)=-1.8654,
+    MultivariateDistributionLikelihood(dirichletDistribution)=1.7918,
+    Exponential(alpha)=-0.3069,
+    CTMCScalePrior(ctmcScalePrior)=-360688.4475,
+    LogNormal(bdss.birthRate)=-2.0385,
+    Uniform(bdss.relativeDeathRate)=0.0,
+    LogNormal(bdss.psi)=-30.8125,
+    LogNormal(bdss.origin)=-2.0385,
+    BirthDeathSerialSamplingModel/bdss(treeModel)=-Inf,
+    StrictClockBranchRates(strictClockBranchRates[branchRates])=0.0
+    Total = -Infinity
+  ),
+  CompoundLikelihood(compoundModel)=(
+    TreeDataLikelihood(TreeDataLikelihood[treeLikelihood])=-135461.748
+    Total = -135461.74795395677
+  )
+  Total = -Infinity
+For more information go to <http://beast.community>.
